@@ -12,7 +12,7 @@ var bot = new builder.BotConnectorBot(botConnectorOptions);
 bot.add('/', function (session) {
 
     //respond with user's message
-    session.send("(jefago.org) " + session.message.text);
+    session.send("Here is a thought: " + session.message.text);
 });
 
 // Setup Restify Server
