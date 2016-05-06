@@ -12,7 +12,7 @@ var bot = new builder.BotConnectorBot(botConnectorOptions);
 bot.add('/', function (session) {
 
     //respond with user's message
-    session.send("You said the following: " + session.message.text);
+    session.send("(jefago.org) " + session.message.text);
 });
 
 // Setup Restify Server
@@ -35,6 +35,6 @@ server.get(/.*/, restify.serveStatic({
 
 
 
-server.listen(process.env.port || 3978, function () {
+server.listen(process.env.PORT || 3978, function () {
     console.log('%s listening to %s', server.name, server.url);
 });
